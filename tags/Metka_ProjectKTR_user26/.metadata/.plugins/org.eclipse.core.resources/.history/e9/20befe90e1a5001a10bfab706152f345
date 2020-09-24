@@ -1,0 +1,58 @@
+package ktr;
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class Main extends JFrame {
+	int a = 55 * 10 * 100/100;
+	private JTextField input = new JTextField("");
+	private JButton button = new JButton("Расчет");
+	private JLabel label = new JLabel("ПИ-220");
+	private JLabel label2 = new JLabel("Каменева Полина Робертовна");
+	private JLabel label3 = new JLabel("Темиик Наталья Сергеевна");
+	private JLabel label4 = new JLabel("Редин Максим Александрович");
+	private JLabel label5 = new JLabel("449");
+	private JLabel label6 = new JLabel("463");
+	private JLabel label7 = new JLabel("020");
+	private JLabel label8 = new JLabel("0бъем параллелепипеда равен:");
+
+	public Main() {
+		super("Simple Example");
+		this.setBounds(100, 100, 700, 400);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		button.addActionListener(new ButtonEventListener());
+		setContentPane(new JLabel(new ImageIcon("logotype.jpg")));
+		Container container = this.getContentPane();
+		container.setLayout(new GridLayout(10, 2, 2, 2));
+		container.add(label);
+		container.add(label2);
+		container.add(label3);
+		container.add(label4);
+		container.add(label5);
+		container.add(label6);
+		container.add(label7);
+		container.add(input);
+		container.add(button);
+		container.add(label8);
+	}
+		class ButtonEventListener implements ActionListener {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					int a = 55 * Integer.parseInt(input.getText()) * 100 / 100;
+					label8.setText("Объем параллелепипеда равен: " + a + " куб. м.");
+				}  catch (NumberFormatException use) {
+					JOptionPane.showMessageDialog(Main.this, "Ввод неверный!");
+					
+				}
+			}
+				
+			}
+	
+
+	public static void main(String[] args) {
+		Main app = new Main();
+		app.setVisible(true);
+	}
+}

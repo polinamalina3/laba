@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+D:\Project_KTR-Dev\ktr\.metadata\.plugins\org.eclipse.jdt.core
+1067094681.index
+289793829.index
