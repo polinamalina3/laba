@@ -20,7 +20,7 @@ public class Main extends JFrame {
 	private JLabel label = new JLabel("ПИ-220");
 	private JLabel label2 = new JLabel("Каменева Полина Робертовна");
 	private JLabel label3 = new JLabel("Темник Наталья Сергеевна");
-	private JLabel label4 = new JLabel("Редин Максим Александрович");
+	private JLabel label4 = new JLabel("Редин Максим Александрович alexandrovich.m@gmail.com");
 	private JLabel label5 = new JLabel("449");
 	private JLabel label6 = new JLabel("463");
 	private JLabel label7 = new JLabel("020");
