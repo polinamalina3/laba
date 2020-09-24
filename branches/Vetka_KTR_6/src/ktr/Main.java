@@ -13,7 +13,8 @@ import javax.swing.*;
 public class Main extends JFrame {
 	int a = 55 * 10 * 100 / 100;
 	private JTextField input = new JTextField("");
-	private JTextField info = new JTextField("Òåìà êóðñîâîãî ïðîåêòà: Ðàñ÷åò ïëàíèðîâêè");
+
+ 	private JTextField info = new JTextField("Òåìà êóðñîâîãî ïðîåêòà: Ðàñ÷åò ïëàíèðîâêè");
 	private JButton button = new JButton("Ðàñ÷åò");
 	private JButton button2 = new JButton("Ìíåìîñõåìà");
 	private JButton button3 = new JButton("Èíôîðìàöèÿ");
@@ -22,7 +23,7 @@ public class Main extends JFrame {
 
   private JLabel label2 = new JLabel("Êàìåíåâà Ïîëèíà Ðîáåðòîâíà kampoly@gmail.com");
   private JLabel label3 = new JLabel("Òåìíèê Íàòàëüÿ Ñåðãååâíà temniknatali6@gmail.com");
-	private JLabel label4 = new JLabel("Ðåäèí Ìàêñèì Àëåêñàíäðîâè÷");
+	private JLabel label4 = new JLabel("Ðåäèí Ìàêñèì Àëåêñàíäðîâè÷ alexandrovich.m@gmail.com");
 	private JLabel label5 = new JLabel("449");
 	private JLabel label6 = new JLabel("463");
 	private JLabel label7 = new JLabel("020");
