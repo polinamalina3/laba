@@ -16,9 +16,10 @@ public class Main extends JFrame {
 	private JTextField info = new JTextField("Тема курсового проекта: Расчет планировки");
 	private JButton button = new JButton("Расчет");
 	private JButton button2 = new JButton("Мнемосхема");
+	private JButton button3 = new JButton("Информация");
 	private JLabel label1 = new JLabel("Уфимский государственный авиационный технический университет");
 	private JLabel label = new JLabel("ПИ-220");
-	private JLabel label2 = new JLabel("Каменева Полина Робертовна");
+	private JLabel label2 = new JLabel("Каменева Полина Робертовна kampoly@gmail.com");
 	private JLabel label3 = new JLabel("Темник Наталья Сергеевна");
 	private JLabel label4 = new JLabel("Редин Максим Александрович");
 	private JLabel label5 = new JLabel("449");
@@ -32,6 +33,7 @@ public class Main extends JFrame {
 		this.setBounds(100, 100, 700, 450);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		button.addActionListener(new ButtonEventListener());
+		button3.addActionListener(new ButtonEventListener1());
 		setContentPane(new JLabel(new ImageIcon("logotype.jpg")));
 		Container container = this.getContentPane();
 
@@ -50,6 +52,7 @@ public class Main extends JFrame {
 		container.add(input);
 		container.add(button);
 		container.add(button2);
+		container.add(button3);
 		container.add(label8);
 		container.add(info);
 
@@ -60,6 +63,11 @@ public class Main extends JFrame {
 				m.setVisible(true);
 			}
 		});
+		
+
+
+
+        
 		JLabel txtBrowserURILabel;
 		txtBrowserURILabel = new JLabel("asu.ugatu.ac.ru");
 		txtBrowserURILabel.setBounds(260, 170, 150, 30);
@@ -131,6 +139,13 @@ public class Main extends JFrame {
 
 			}
 		}
+
+	}
+	class ButtonEventListener1 implements ActionListener {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(Main.this,
+				"<html><h2>Информация</h2><i>GitHub — крупнейший веб-сервис для хостинга IT-проектов и их совместной разработки.</i>");
+				}
 
 	}
 
