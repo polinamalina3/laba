@@ -13,20 +13,21 @@ import javax.swing.*;
 public class Main extends JFrame {
 	int a = 55 * 10 * 100 / 100;
 	private JTextField input = new JTextField("");
-	private JTextField info = new JTextField("Тема курсового проекта: Расчет планировки");
-	private JButton button = new JButton("Расчет");
-	private JButton button2 = new JButton("Мнемосхема");
-	private JButton button3 = new JButton("Информация");
-	private JLabel label1 = new JLabel("Уфимский государственный авиационный технический университет");
-	private JLabel label = new JLabel("ПИ-220");
-	private JLabel label2 = new JLabel("Каменева Полина Робертовна kampoly@gmail.com");
-	private JLabel label3 = new JLabel("Темник Наталья Сергеевна");
-	private JLabel label4 = new JLabel("Редин Максим Александрович");
+	private JTextField info = new JTextField("Г’ГҐГ¬Г  ГЄГіГ°Г±Г®ГўГ®ГЈГ® ГЇГ°Г®ГҐГЄГІГ : ГђГ Г±Г·ГҐГІ ГЇГ«Г Г­ГЁГ°Г®ГўГЄГЁ");
+	private JButton button = new JButton("ГђГ Г±Г·ГҐГІ");
+	private JButton button2 = new JButton("ГЊГ­ГҐГ¬Г®Г±ГµГҐГ¬Г ");
+	private JButton button3 = new JButton("Г€Г­ГґГ®Г°Г¬Г Г¶ГЁГї");
+	private JLabel label1 = new JLabel("Г“ГґГЁГ¬Г±ГЄГЁГ© ГЈГ®Г±ГіГ¤Г Г°Г±ГІГўГҐГ­Г­Г»Г© Г ГўГЁГ Г¶ГЁГ®Г­Г­Г»Г© ГІГҐГµГ­ГЁГ·ГҐГ±ГЄГЁГ© ГіГ­ГЁГўГҐГ°Г±ГЁГІГҐГІ");
+	private JLabel label = new JLabel("ГЏГ€-220");
+
+  private JLabel label2 = new JLabel("ГЉГ Г¬ГҐГ­ГҐГўГ  ГЏГ®Г«ГЁГ­Г  ГђГ®ГЎГҐГ°ГІГ®ГўГ­Г  kampoly@gmail.com");
+  private JLabel label3 = new JLabel("Г’ГҐГ¬Г­ГЁГЄ ГЌГ ГІГ Г«ГјГї Г‘ГҐГ°ГЈГҐГҐГўГ­Г  temniknatali6@gmail.com");
+	private JLabel label4 = new JLabel("ГђГҐГ¤ГЁГ­ ГЊГ ГЄГ±ГЁГ¬ ГЂГ«ГҐГЄГ±Г Г­Г¤Г°Г®ГўГЁГ·");
 	private JLabel label5 = new JLabel("449");
 	private JLabel label6 = new JLabel("463");
 	private JLabel label7 = new JLabel("020");
-	private JLabel label10 = new JLabel("ФГБОУ ВО");
-	private JLabel label8 = new JLabel("0бъем параллелепипеда равен:");
+	private JLabel label10 = new JLabel("Г”ГѓГЃГЋГ“ Г‚ГЋ");
+	private JLabel label8 = new JLabel("0ГЎГєГҐГ¬ ГЇГ Г°Г Г«Г«ГҐГ«ГҐГЇГЁГЇГҐГ¤Г  Г°Г ГўГҐГ­:");
 
 	public Main() {
 		super("Simple Example");
@@ -133,9 +134,9 @@ public class Main extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			try {
 				int a = 55 * Integer.parseInt(input.getText()) * 100 / 100;
-				label8.setText("Объем параллелепипеда равен: " + a + " куб. м.");
+				label8.setText("ГЋГЎГєГҐГ¬ ГЇГ Г°Г Г«Г«ГҐГ«ГҐГЇГЁГЇГҐГ¤Г  Г°Г ГўГҐГ­: " + a + " ГЄГіГЎ. Г¬.");
 			} catch (NumberFormatException use) {
-				JOptionPane.showMessageDialog(Main.this, "Ввод неверный!");
+				JOptionPane.showMessageDialog(Main.this, "Г‚ГўГ®Г¤ Г­ГҐГўГҐГ°Г­Г»Г©!");
 
 			}
 		}
@@ -144,7 +145,7 @@ public class Main extends JFrame {
 	class ButtonEventListener1 implements ActionListener {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(Main.this,
-				"<html><h2>Информация</h2><i>GitHub — крупнейший веб-сервис для хостинга IT-проектов и их совместной разработки.</i>");
+				"<html><h2>Г€Г­ГґГ®Г°Г¬Г Г¶ГЁГї</h2><i>GitHub вЂ” ГЄГ°ГіГЇГ­ГҐГ©ГёГЁГ© ГўГҐГЎ-Г±ГҐГ°ГўГЁГ± Г¤Г«Гї ГµГ®Г±ГІГЁГ­ГЈГ  IT-ГЇГ°Г®ГҐГЄГІГ®Гў ГЁ ГЁГµ Г±Г®ГўГ¬ГҐГ±ГІГ­Г®Г© Г°Г Г§Г°Г ГЎГ®ГІГЄГЁ.</i>");
 				}
 
 	}
@@ -181,7 +182,7 @@ class Mnem extends JPanel {
 	protected void paintComponent(Graphics g) {
 		Image image = null;
 		try {
-			image = ImageIO.read(new File("мнем.png"));
+			image = ImageIO.read(new File("Г¬Г­ГҐГ¬.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
