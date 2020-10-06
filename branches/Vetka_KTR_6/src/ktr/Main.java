@@ -2,10 +2,17 @@ package ktr;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.BufferedReader;
+import java.io.DataInputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -28,8 +35,9 @@ public class Main extends JFrame {
 	private JLabel label10 = new JLabel("ФГБОУ ВО");
 	private JLabel label8 = new JLabel("0бъем параллелепипеда равен:");
 
-	public Main() {
+	public Main(int b) {
 		super("Simple Example");
+		
 		this.setBounds(100, 100, 700, 450);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		button.addActionListener(new ButtonEventListener());
@@ -42,6 +50,10 @@ public class Main extends JFrame {
 
 		container.add(label10);
 
+		
+		input.setText(String.valueOf(b));
+		
+		
 		container.add(label);
 		container.add(label2);
 		container.add(label3);
@@ -49,12 +61,13 @@ public class Main extends JFrame {
 		// container.add(label5);
 		// container.add(label6);
 		// container.add(label7);
-		container.add(input);
+		
 		container.add(button);
 		container.add(button2);
 		container.add(button3);
 		container.add(label8);
 		container.add(info);
+		container.add(input);
 
 		button2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -150,7 +163,32 @@ public class Main extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Main app = new Main();
+		File settingsFile = new File("input.txt");
+		byte[] b = new byte[100];
+		String input;
+    	try {
+    	    if (settingsFile.createNewFile()) {
+    	    	System.out.println("Нет файла");;
+    	    	return;
+    	    }
+    	}
+    	catch (Exception e) {
+    	    System.out.println(e);
+    	}
+        try {
+        	FileInputStream settingsStream = new FileInputStream(settingsFile);	
+    	    settingsStream.read(b);
+    	    settingsStream.close();
+        }
+    	catch (Exception e) {
+    		System.out.println(e);
+    	}
+		
+        
+        input = new String(b).trim();
+        int value = Integer.valueOf(input);
+        
+		Main app = new Main(value);
 		app.setVisible(true);
 	}
 }
@@ -177,6 +215,8 @@ class Mnem extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
+	String a;
 
 	protected void paintComponent(Graphics g) {
 		Image image = null;
